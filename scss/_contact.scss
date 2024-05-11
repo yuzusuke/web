@@ -37,7 +37,6 @@
         }
     }
 
-
     .column-first {
         display: flex;
         justify-content: center; /* 画像を中央に配置 */
@@ -54,8 +53,6 @@
         @media screen and (max-width: 768px) {
             display: none; /* 画像を非表示にする */
         }
-
-        
     }
 
     .column-second {
@@ -70,7 +67,6 @@
         }
     }
 
-    
     .contact-form {
         font-size: 14px;
         width: 100%;              /* フォームの幅を100%に設定 */
@@ -83,10 +79,6 @@
             gap: 15px; /* フォーム要素間のスペースを調整 */
         }
     }
-
-
-
-
 
     .contact-form label {
         margin-bottom: 5px;       /* ラベルの下にマージンを追加 */
@@ -104,6 +96,12 @@
         border: 1px solid #ccc;
         border-radius: 5px;       /* 角を丸く */
         background-color: $base-01;
+        color: $text-01; /* テキストの色を指定 */
+
+        &::placeholder { 
+            color: lighten($text-01, 40%); /* プレースホルダーの色を薄く */
+            opacity: 1; /* プレースホルダーの透明度を設定 */
+        }
 
         @media screen and (max-width: 768px) {
             font-size: 14px; /* 入力フィールドのフォントサイズを小さくする */
@@ -118,8 +116,8 @@
         resize: vertical;         /* 垂直方向にリサイズ可能 */
 
         @media screen and (max-width: 768px) {
-        height: 200px; /* テキストエリアの高さを増やす */
-        padding: 12px; /* パディングを調整 */
+            height: 200px; /* テキストエリアの高さを増やす */
+            padding: 12px; /* パディングを調整 */
         }
     }
 
@@ -141,14 +139,15 @@
         }
 
         @media (max-width: 480px) { /* iPhone用の修正 */
-        padding: 10px 15px; /* 送信ボタンのパディングを調整 */
-    }
+            padding: 10px 15px; /* 送信ボタンのパディングを調整 */
+        }
     }
 
     .contact-submit:hover {
         background-color: darken($btn-01, 5%); /* ホバー時に色を暗くする */
     }
 }
+
 
 .prof-space01{
     background-color: $base-01;

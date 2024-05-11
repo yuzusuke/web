@@ -745,7 +745,7 @@ footer p {
 .works-article__btn__oposite {
     justify-content: center; /* ボタンを中央寄せ */
     margin-top: 16px;
-    margin-bottom: 56px;
+    margin-bottom: 80px;
   }
 }
 .works-space {
@@ -987,6 +987,16 @@ footer p {
   border: 1px solid #ccc;
   border-radius: 5px; /* 角を丸く */
   background-color: #f0f0f0;
+  color: #323232; /* テキストの色を指定 */
+}
+.contact .contact-form input::-moz-placeholder, .contact .contact-form textarea::-moz-placeholder {
+  color: #989898; /* プレースホルダーの色を薄く */
+  opacity: 1; /* プレースホルダーの透明度を設定 */
+}
+.contact .contact-form input::placeholder,
+.contact .contact-form textarea::placeholder {
+  color: #989898; /* プレースホルダーの色を薄く */
+  opacity: 1; /* プレースホルダーの透明度を設定 */
 }
 @media screen and (max-width: 768px) {
   .contact .contact-form input,
