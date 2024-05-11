@@ -16,7 +16,6 @@
     background-size:cover;
     // margin: 0 auto;
 }
-
 // レスポンシブデザイン用のメディアクエリ
 @media screen and (max-width: 1024px) {
     .mainvisual {
@@ -26,7 +25,6 @@
 }
 
 
-
 /* タブレット対応 */
 @media (max-width: 768px) {
     .mainvisual {
@@ -34,7 +32,6 @@
         background-position: top; // 背景画像の位置を上に変更
     }
 }
-
 
 
 /* スマホ対応 */
