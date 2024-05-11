@@ -1,0 +1,78 @@
+@use 'variables'as *;
+
+// PROFILE
+.prof-space {
+    background-color: $base-01;
+    display: flex;
+    justify-content: center; /* 水平方向の中央寄せ */
+    align-items: center; /* 垂直方向の中央寄せ */
+    text-align: center; /* テキストを中央寄せ */
+    padding-top: 121px; /* 上部に121pxの空白 */
+    padding-bottom: 72px; /* 下部に72pxの空白 */
+
+    @media screen and (max-width: 767px) {
+        padding-top: 64px; /* iPhoneの場合の上部空白 */
+        padding-bottom: 48px; /* iPhoneの場合の下部空白 */
+        // justify-content: flex-start; /* モバイルデバイスでは左寄せ */
+    }
+}
+
+.prof-title {
+    margin: 0 auto; /* 左右中央に寄せる */
+
+    @media screen and (max-width: 767px) {
+        // margin-left: 16px; /* モバイルデバイスでは左に寄せる */
+    }
+}
+
+.profile {
+    background-color: $base-01;
+
+    &-primary {
+        display: flex;
+        flex-wrap: wrap; /* レスポンシブ時に折り返す */
+        align-items: center; /* 垂直方向の中央寄せ */
+
+        .colum-first,
+        .colum-second {
+            padding: 16px 48px; /* 上下に16px、左右に48pxのパディング */
+            width: 100%; /* 幅を100%に設定 */
+            box-sizing: border-box; /* ボックスサイズを要素の幅と高さに含める */
+
+            @media screen and (max-width: 767px) {
+                padding: 16px 24px; /* レスポンシブ時は既存の左右間で残す */
+            }
+        }
+
+        .colum-first__photo01 {
+            width: 100%;
+            height: auto; /* 高さを自動調整 */
+            max-width: 100%; /* 最大幅を100%に設定 */
+        }
+
+        .section-head,
+        .profile-article__head01,
+        .profile-article__head02 {
+            margin-bottom: 16px;
+            padding-right: 40px;
+            text-align: left; /* テキストを左寄せ */
+        }
+    }
+}
+
+// レスポンシブデザイン
+@media screen and (min-width: 768px) {
+    .prof-space {
+        justify-content: space-between; /* 両端寄せ */
+    }
+
+    .profile-primary {
+        gap: 24px; /* 画像とテキストの間の空白 */
+    }
+
+    .colum-first,
+    .colum-second {
+        max-width: calc(50% - 12px); /* 幅を均等にする */
+        
+    }
+}

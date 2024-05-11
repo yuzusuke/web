@@ -1,0 +1,204 @@
+@use 'variables' as *;
+
+.header {
+    color: $text-02;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    padding: 0 48px;
+    background-color: $header-01;
+    font-family: $outfit;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    &__logo {
+        width: 120px;
+        transition: width 0.3s;
+    }
+}
+
+.icon-size {
+    width: 40%;
+}
+
+.c-txt.line {
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.c-txt.line::before {
+    background: $base-01;
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+}
+
+.c-txt.line:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.topword {
+    font-size: 40px;
+    color: #fbfcff8e;
+    padding-left: 1.2em;
+    padding-top: 7em;
+    font-family: Noto Sans JP Thin, sans-serif;
+}
+
+.mainvisual {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/top01.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    span {
+        height: 3px;
+        width: 25px;
+        background: $text-02;
+        margin: 4px 0;
+        transition: 0.3s;
+    }
+}
+
+.navigation-menu {
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 0 32px;
+        font-size: 16px;
+    }
+    .header__logo {
+        width: 100px;
+    }
+    .topword {
+        font-size: 32px;
+        padding-top: 7em;
+    }
+    .icon-size {
+        width: 50%;
+    }
+    .mainvisual {
+        height: 80vh;
+        background-position: top;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 16px;
+        font-size: 14px;
+    }
+    .header__logo {
+        width: 80px;
+    }
+    .topword {
+        font-size: 24px;
+        padding-top: 8em;
+    }
+    .icon-size {
+        width: 60%;
+    }
+    .mainvisual {
+        height: 60vh;
+        background-position: top;
+    }
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+    .navigation-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0; /* 左に配置 */
+        width: 100%; /* 幅を100%に調整 */
+        background: $header-01;
+        text-align: center;
+    }
+    .navigation-menu.show {
+        display: flex;
+        margin-bottom: 20px; /* 下に空白を追加 */
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 56px;
+        padding: 0 16px;
+        font-size: 12px;
+    }
+    .header__logo {
+        width: 60px;
+    }
+    .topword {
+        font-size: 18px;
+        padding-top: 9em;
+    }
+    .icon-size {
+        width: 70%;
+        
+    }
+    .mainvisual {
+        height: 50vh;
+        background-position: top;
+    }
+    .c-txt.line {
+        padding-bottom: 3px;
+    }
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .navigation-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 56px;
+        left: 0; /* 左に配置 */
+        width: 100%; /* 幅を100%に調整 */
+        background: $header-01;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .navigation-menu.show {
+        display: flex;
+        margin-bottom: 20px; /* 下に空白を追加 */
+    }
+}
+
+

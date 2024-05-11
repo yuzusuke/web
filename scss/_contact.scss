@@ -1,0 +1,157 @@
+@use 'variables'as *;
+
+// //////////////////////////CONTACT///////////////////////////
+
+.contact {
+    background-color: $base-01;
+
+    &-container {
+        display: flex;
+        justify-content: center; /* 水平方向に中央寄せ */
+        align-items: center;    /* 垂直方向に中央寄せ */
+        height: 100%;           /* 必要に応じて親要素の高さを指定 */
+        padding: 20px;          /* スマホ用のパディング */
+    }
+
+    &-primary {
+        background-color: $main-01;
+        width: 800px;
+        height: 480px;
+        max-width: 100%;        /* 幅の最大値を100%に設定 */
+        box-sizing: border-box; /* パディングとボーダーを含む幅と高さ */
+        display: flex;          /* フレックスボックスを使用 */
+
+        @media screen and (max-width: 768px) {
+            width: 90%;    /* 幅を90%に設定 */
+            height: auto;  /* 高さを自動調整 */
+            flex-direction: column; /* カラムを縦に並べる */
+        }
+    }
+
+    .column-first, .column-second {
+        flex: 1;               /* 各カラムを均等に配置 */
+        box-sizing: border-box; /* パディングとボーダーを含む幅 */
+
+        @media screen and (max-width: 480px) {
+            width: 100%;   /* カラムの幅を100%に設定 */
+        }
+    }
+
+
+    .column-first {
+        display: flex;
+        justify-content: center; /* 画像を中央に配置 */
+        align-items: center;    /* 画像を中央に配置 */
+        overflow: hidden;       /* 画像がオーバーフローしないように隠す */
+        padding: 0;             /* パディングをなしに設定 */
+    }
+
+    .contact-image {
+        width: 100%;            /* 画像の幅をカラムに合わせる */
+        height: 100%;           /* 画像の高さをカラムに合わせる */
+        object-fit: cover;      /* 画像のアスペクト比を維持しつつカバー */
+
+        @media screen and (max-width: 768px) {
+            display: none; /* 画像を非表示にする */
+        }
+
+        
+    }
+
+    .column-second {
+        display: flex;
+        justify-content: center;  /* フォームを中央に配置 */
+        align-items: center;      /* フォームを中央に配置 */
+        padding: 20px;            /* パディングを追加 */
+        width: 50%;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;   /* カラムの幅を100%に設定 */
+        }
+    }
+
+    
+    .contact-form {
+        font-size: 14px;
+        width: 100%;              /* フォームの幅を100%に設定 */
+        max-width: 400px;          /* 最大幅を400pxに設定 */
+        display: flex;
+        flex-direction: column;   /* 縦方向に並べる */
+        color: $base-01;
+
+        @media screen and (max-width: 480px) {
+            gap: 15px; /* フォーム要素間のスペースを調整 */
+        }
+    }
+
+
+
+
+
+    .contact-form label {
+        margin-bottom: 5px;       /* ラベルの下にマージンを追加 */
+
+        @media screen and (max-width: 480px) {
+            font-size: 14px; /* ラベルのフォントサイズを小さくする */
+        }
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 75%;
+        padding: 10px;
+        margin-bottom: 30px;      /* 各フィールドの下にマージンを追加 */
+        border: 1px solid #ccc;
+        border-radius: 5px;       /* 角を丸く */
+        background-color: $base-01;
+
+        @media screen and (max-width: 768px) {
+            font-size: 14px; /* 入力フィールドのフォントサイズを小さくする */
+            padding: 12px; /* パディングを少し減らす */
+            width: 100%; /* 幅を100%に設定 */
+        }
+    }
+
+    .contact-form textarea {
+        height: 180px;            /* テキストエリアの高さを指定 */
+        width: 100%;
+        resize: vertical;         /* 垂直方向にリサイズ可能 */
+
+        @media screen and (max-width: 768px) {
+        height: 200px; /* テキストエリアの高さを増やす */
+        padding: 12px; /* パディングを調整 */
+        }
+    }
+
+    .contact-submit {
+        background-color: $btn-01; /* ボタンの背景色 */
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 50px;      /* 丸いボタン */
+        cursor: pointer;
+        align-self: center;       /* ボタンを中央に配置 */
+        text-align: center;       /* テキストを中央に配置 */
+        width: auto;              /* 幅を自動調整 */
+
+        @media screen and (max-width: 480px) {
+            font-size: 16px; /* 送信ボタンのフォントサイズを適切に調整 */
+            padding: 10px 20px; /* 送信ボタンのパディングを調整 */
+            max-width: 100%; /* 最大幅を100%に設定 */
+        }
+
+        @media (max-width: 480px) { /* iPhone用の修正 */
+        padding: 10px 15px; /* 送信ボタンのパディングを調整 */
+    }
+    }
+
+    .contact-submit:hover {
+        background-color: darken($btn-01, 5%); /* ホバー時に色を暗くする */
+    }
+}
+
+.prof-space01{
+    background-color: $base-01;
+    width: 100%;
+    height: 120px;
+}

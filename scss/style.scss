@@ -1,0 +1,53 @@
+@use 'reset';
+@use 'variables'as *;
+@use 'common';
+@use 'modules';
+@use 'header';
+@use 'footer';
+@use 'profile';
+@use 'works';
+@use 'contact';
+
+
+.mainvisual {
+    height: 100vh;
+    width: 100% auto;
+    background-image: url(../img/top01.jpg);
+    background-size:cover;
+    // margin: 0 auto;
+}
+
+// レスポンシブデザイン用のメディアクエリ
+@media screen and (max-width: 1024px) {
+    .mainvisual {
+        height: 80vh; // 高さを調整
+        background-position: top; // 背景画像の位置を上に変更
+    }
+}
+
+
+
+/* タブレット対応 */
+@media (max-width: 768px) {
+    .mainvisual {
+        height: 60vh; // 高さを調整
+        background-position: top; // 背景画像の位置を上に変更
+    }
+}
+
+
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+    .mainvisual {
+        height: 50vh; // 高さを調整
+        background-position: top; // 背景画像の位置を上に変更
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,1065 @@
+@charset "UTF-8";
+/*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+[type=number] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+body {
+  color: #323232;
+  font-family: "Noto Sans JP", "sans-serif";
+  background-color: #f0f0f0;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+h7 {
+  font-size: 14px;
+}
+
+h8 {
+  font-size: 12px;
+}
+
+p {
+  font-size: 14px;
+}
+
+span {
+  display: inline-block;
+  font-size: 16;
+}
+
+li {
+  list-style: none;
+}
+
+.navigation-menu {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+
+.header {
+  color: #FBFCFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  padding: 0 48px;
+  background-color: rgba(0, 0, 0, 0.35);
+  font-family: "Outfit";
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.header__logo {
+  width: 120px;
+  transition: width 0.3s;
+}
+
+.icon-size {
+  width: 40%;
+}
+
+.c-txt.line {
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.c-txt.line::before {
+  background: #f0f0f0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+
+.c-txt.line:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.topword {
+  font-size: 40px;
+  color: rgba(251, 252, 255, 0.5568627451);
+  padding-left: 1.2em;
+  padding-top: 7em;
+  font-family: Noto Sans JP Thin, sans-serif;
+}
+
+.mainvisual {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/top01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger-menu span {
+  height: 3px;
+  width: 25px;
+  background: #FBFCFF;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.navigation-menu {
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 0 32px;
+    font-size: 16px;
+  }
+  .header__logo {
+    width: 100px;
+  }
+  .topword {
+    font-size: 32px;
+    padding-top: 7em;
+  }
+  .icon-size {
+    width: 50%;
+  }
+  .mainvisual {
+    height: 80vh;
+    background-position: top;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+    font-size: 14px;
+  }
+  .header__logo {
+    width: 80px;
+  }
+  .topword {
+    font-size: 24px;
+    padding-top: 8em;
+  }
+  .icon-size {
+    width: 60%;
+  }
+  .mainvisual {
+    height: 60vh;
+    background-position: top;
+  }
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  .navigation-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0; /* 左に配置 */
+    width: 100%; /* 幅を100%に調整 */
+    background: rgba(0, 0, 0, 0.35);
+    text-align: center;
+  }
+  .navigation-menu.show {
+    display: flex;
+    margin-bottom: 20px; /* 下に空白を追加 */
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+    font-size: 12px;
+  }
+  .header__logo {
+    width: 60px;
+  }
+  .topword {
+    font-size: 18px;
+    padding-top: 9em;
+  }
+  .icon-size {
+    width: 70%;
+  }
+  .mainvisual {
+    height: 50vh;
+    background-position: top;
+  }
+  .c-txt.line {
+    padding-bottom: 3px;
+  }
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .navigation-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    left: 0; /* 左に配置 */
+    width: 100%; /* 幅を100%に調整 */
+    background: rgba(0, 0, 0, 0.35);
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .navigation-menu.show {
+    display: flex;
+    margin-bottom: 20px; /* 下に空白を追加 */
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #002167;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+}
+footer p {
+  margin: 0;
+  font-family: "Noto Sans JP Light", sans-serif;
+  color: #f0f0f0;
+}
+
+.prof-space {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center; /* 水平方向の中央寄せ */
+  align-items: center; /* 垂直方向の中央寄せ */
+  text-align: center; /* テキストを中央寄せ */
+  padding-top: 121px; /* 上部に121pxの空白 */
+  padding-bottom: 72px; /* 下部に72pxの空白 */
+}
+@media screen and (max-width: 767px) {
+  .prof-space {
+    padding-top: 64px; /* iPhoneの場合の上部空白 */
+    padding-bottom: 48px; /* iPhoneの場合の下部空白 */
+  }
+}
+
+.prof-title {
+  margin: 0 auto; /* 左右中央に寄せる */
+}
+.profile {
+  background-color: #f0f0f0;
+}
+.profile-primary {
+  display: flex;
+  flex-wrap: wrap; /* レスポンシブ時に折り返す */
+  align-items: center; /* 垂直方向の中央寄せ */
+}
+.profile-primary .colum-first,
+.profile-primary .colum-second {
+  padding: 16px 48px; /* 上下に16px、左右に48pxのパディング */
+  width: 100%; /* 幅を100%に設定 */
+  box-sizing: border-box; /* ボックスサイズを要素の幅と高さに含める */
+}
+@media screen and (max-width: 767px) {
+  .profile-primary .colum-first,
+.profile-primary .colum-second {
+    padding: 16px 24px; /* レスポンシブ時は既存の左右間で残す */
+  }
+}
+.profile-primary .colum-first__photo01 {
+  width: 100%;
+  height: auto; /* 高さを自動調整 */
+  max-width: 100%; /* 最大幅を100%に設定 */
+}
+.profile-primary .section-head,
+.profile-primary .profile-article__head01,
+.profile-primary .profile-article__head02 {
+  margin-bottom: 16px;
+  padding-right: 40px;
+  text-align: left; /* テキストを左寄せ */
+}
+
+@media screen and (min-width: 768px) {
+  .prof-space {
+    justify-content: space-between; /* 両端寄せ */
+  }
+  .profile-primary {
+    gap: 24px; /* 画像とテキストの間の空白 */
+  }
+  .colum-first,
+.colum-second {
+    max-width: calc(50% - 12px); /* 幅を均等にする */
+  }
+}
+@media screen and (max-width: 767px) {
+  .works-primary {
+    display: flex;
+    flex-direction: column-reverse; /* 垂直方向に並べ替えるが逆順 */
+  }
+  .works-primary.lp {
+    flex-direction: column; /* LP制作セクションは順序を変更しない */
+  }
+  .colum-first__photo01__oposite {
+    padding-left: 0 !important; /* レスポンシブ時に左パディングを削除 */
+  }
+  .colum-second,
+.section-head__small,
+.section-head__large,
+.profile-article__head01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平方向の中央寄せ */
+    justify-content: center; /* 垂直方向の中央寄せ */
+    text-align: center; /* テキストを中央寄せ */
+  }
+  .section-head__small {
+    padding-bottom: 4px;
+  }
+  .section-head,
+.works-article__head01,
+.works-article__btn,
+.profile-article__head01,
+.profile-article__head02 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    text-align: center; /* テキストを中央寄せ */
+  }
+  .works-article__btn,
+.works-article__btn__oposite {
+    justify-content: center; /* ボタンを中央寄せ */
+    margin-top: 24px;
+    margin-bottom: 56px;
+  }
+}
+.works-space {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center; /* 水平方向の中央寄せ */
+  align-items: center; /* 垂直方向の中央寄せ */
+  text-align: center; /* テキストを中央寄せ */
+  padding-top: 121px; /* 上部に121pxの空白 */
+  padding-bottom: 72px; /* 下部に72pxの空白 */
+}
+@media screen and (max-width: 767px) {
+  .works-space {
+    padding-top: 48px; /* iPhoneの場合の上部空白 */
+    padding-bottom: 48px; /* iPhoneの場合の下部空白 */
+  }
+}
+
+.works-title {
+  margin: 0 auto; /* 左右中央に寄せる */
+}
+.works {
+  background-color: #f0f0f0;
+}
+.works-primary {
+  display: flex;
+  flex-wrap: wrap; /* レスポンシブ時に折り返す */
+  align-items: center; /* 垂直方向の中央寄せ */
+}
+.works-primary .colum-first,
+.works-primary .colum-second {
+  padding: 16px 48px; /* 上下に16px、左右に24pxのパディング */
+  width: 100%; /* 幅を100%に設定 */
+  box-sizing: border-box; /* ボックスサイズを要素の幅と高さに含める */
+}
+@media screen and (max-width: 767px) {
+  .works-primary .colum-first,
+.works-primary .colum-second {
+    justify-content: center; /* 水平方向の中央寄せ */
+    align-items: center; /* 垂直方向の中央寄せ */
+    text-align: center; /* テキストを中央寄せ */
+    padding: 16px 24px; /* レスポンシブ時は既存の左右間で残す */
+  }
+}
+.works-primary .colum-first__photo01 {
+  width: 100%;
+  height: auto; /* 高さを自動調整 */
+  max-width: 100%; /* 最大幅を100%に設定 */
+}
+.works-primary .section-head,
+.works-primary .works-article__head01 {
+  margin-bottom: 16px;
+  padding-right: 40px;
+  padding-left: 24px;
+  text-align: left; /* テキストを左寄せ */
+}
+.works-primary .colum-first__photo01__oposite {
+  width: 100%;
+  height: auto; /* 高さを自動調整 */
+  max-width: 100%; /* 最大幅を100%に設定 */
+  padding-left: 24px;
+}
+.works-primary .section-head__oposite,
+.works-primary .works-article__head01__oposite {
+  margin-bottom: 16px;
+  text-align: right; /* テキストを右寄せ */
+}
+.works-primary .works-article__btn {
+  display: flex; /* フレックスボックスにする */
+  justify-content: flex-start; /* 右に寄せる */
+  padding-right: 40px; /* 右にスペースを追加 */
+  padding-left: 24px;
+}
+.works-primary .works-article__btn__oposite {
+  display: flex; /* フレックスボックスにする */
+  justify-content: flex-end; /* 右に寄せる */
+}
+
+.c-btn {
+  background: #002167;
+  border: 2px solid #002167;
+  border-radius: 60px;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  max-width: 160px;
+  padding: 12px 28px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .c-btn {
+    width: 100%; /* モバイルデバイスでは幅100% */
+  }
+}
+
+.c-btn.circle {
+  background: #f0f0f0;
+  color: #002167;
+  overflow: hidden;
+  position: relative;
+  transition-duration: 0.4s;
+  z-index: 2;
+}
+@media screen and (max-width: 767px) {
+  .c-btn.circle {
+    width: 100%; /* モバイルデバイスでは幅100% */
+  }
+}
+
+.c-btn.circle::after {
+  background: #002167;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  margin: auto;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-top: 100%;
+  height: 0;
+  z-index: -1;
+  transform: translateY(-50%) scale(0.1);
+  transition: opacity 0.5s, transform 0s;
+  transition-delay: 0s, 0.4s;
+}
+@media screen and (max-width: 767px) {
+  .c-btn.circle::after {
+    max-width: none; /* モバイルデバイスでは最大幅解除 */
+    width: 100%; /* モバイルデバイスでは幅100% */
+  }
+}
+
+.c-btn.circle:hover {
+  color: #f0f0f0;
+}
+
+.c-btn.circle:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+  transition-delay: 0s;
+  transition: opacity 0.8s, transform 0.6s ease-in-out;
+}
+
+.contact {
+  background-color: #f0f0f0;
+}
+.contact-container {
+  display: flex;
+  justify-content: center; /* 水平方向に中央寄せ */
+  align-items: center; /* 垂直方向に中央寄せ */
+  height: 100%; /* 必要に応じて親要素の高さを指定 */
+  padding: 20px; /* スマホ用のパディング */
+}
+.contact-primary {
+  background-color: #002167;
+  width: 800px;
+  height: 480px;
+  max-width: 100%; /* 幅の最大値を100%に設定 */
+  box-sizing: border-box; /* パディングとボーダーを含む幅と高さ */
+  display: flex; /* フレックスボックスを使用 */
+}
+@media screen and (max-width: 768px) {
+  .contact-primary {
+    width: 90%; /* 幅を90%に設定 */
+    height: auto; /* 高さを自動調整 */
+    flex-direction: column; /* カラムを縦に並べる */
+  }
+}
+.contact .column-first, .contact .column-second {
+  flex: 1; /* 各カラムを均等に配置 */
+  box-sizing: border-box; /* パディングとボーダーを含む幅 */
+}
+@media screen and (max-width: 480px) {
+  .contact .column-first, .contact .column-second {
+    width: 100%; /* カラムの幅を100%に設定 */
+  }
+}
+.contact .column-first {
+  display: flex;
+  justify-content: center; /* 画像を中央に配置 */
+  align-items: center; /* 画像を中央に配置 */
+  overflow: hidden; /* 画像がオーバーフローしないように隠す */
+  padding: 0; /* パディングをなしに設定 */
+}
+.contact .contact-image {
+  width: 100%; /* 画像の幅をカラムに合わせる */
+  height: 100%; /* 画像の高さをカラムに合わせる */
+  -o-object-fit: cover;
+     object-fit: cover; /* 画像のアスペクト比を維持しつつカバー */
+}
+@media screen and (max-width: 768px) {
+  .contact .contact-image {
+    display: none; /* 画像を非表示にする */
+  }
+}
+.contact .column-second {
+  display: flex;
+  justify-content: center; /* フォームを中央に配置 */
+  align-items: center; /* フォームを中央に配置 */
+  padding: 20px; /* パディングを追加 */
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .contact .column-second {
+    width: 100%; /* カラムの幅を100%に設定 */
+  }
+}
+.contact .contact-form {
+  font-size: 14px;
+  width: 100%; /* フォームの幅を100%に設定 */
+  max-width: 400px; /* 最大幅を400pxに設定 */
+  display: flex;
+  flex-direction: column; /* 縦方向に並べる */
+  color: #f0f0f0;
+}
+@media screen and (max-width: 480px) {
+  .contact .contact-form {
+    gap: 15px; /* フォーム要素間のスペースを調整 */
+  }
+}
+.contact .contact-form label {
+  margin-bottom: 5px; /* ラベルの下にマージンを追加 */
+}
+@media screen and (max-width: 480px) {
+  .contact .contact-form label {
+    font-size: 14px; /* ラベルのフォントサイズを小さくする */
+  }
+}
+.contact .contact-form input,
+.contact .contact-form textarea {
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 30px; /* 各フィールドの下にマージンを追加 */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* 角を丸く */
+  background-color: #f0f0f0;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact-form input,
+.contact .contact-form textarea {
+    font-size: 14px; /* 入力フィールドのフォントサイズを小さくする */
+    padding: 12px; /* パディングを少し減らす */
+    width: 100%; /* 幅を100%に設定 */
+  }
+}
+.contact .contact-form textarea {
+  height: 180px; /* テキストエリアの高さを指定 */
+  width: 100%;
+  resize: vertical; /* 垂直方向にリサイズ可能 */
+}
+@media screen and (max-width: 768px) {
+  .contact .contact-form textarea {
+    height: 200px; /* テキストエリアの高さを増やす */
+    padding: 12px; /* パディングを調整 */
+  }
+}
+.contact .contact-submit {
+  background-color: #0066BF; /* ボタンの背景色 */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px; /* 丸いボタン */
+  cursor: pointer;
+  align-self: center; /* ボタンを中央に配置 */
+  text-align: center; /* テキストを中央に配置 */
+  width: auto; /* 幅を自動調整 */
+}
+@media screen and (max-width: 480px) {
+  .contact .contact-submit {
+    font-size: 16px; /* 送信ボタンのフォントサイズを適切に調整 */
+    padding: 10px 20px; /* 送信ボタンのパディングを調整 */
+    max-width: 100%; /* 最大幅を100%に設定 */
+  }
+}
+@media (max-width: 480px) {
+  .contact .contact-submit { /* iPhone用の修正 */
+    padding: 10px 15px; /* 送信ボタンのパディングを調整 */
+  }
+}
+.contact .contact-submit:hover {
+  background-color: #0058a6; /* ホバー時に色を暗くする */
+}
+
+.prof-space01 {
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 120px;
+}
+
+.mainvisual {
+  height: 100vh;
+  width: 100% auto;
+  background-image: url(../img/top01.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainvisual {
+    height: 80vh;
+    background-position: top;
+  }
+}
+/* タブレット対応 */
+@media (max-width: 768px) {
+  .mainvisual {
+    height: 60vh;
+    background-position: top;
+  }
+}
+/* スマホ対応 */
+@media (max-width: 480px) {
+  .mainvisual {
+    height: 50vh;
+    background-position: top;
+  }
+}
+/*# sourceMappingURL=style.css.map */

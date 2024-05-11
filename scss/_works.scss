@@ -1,0 +1,207 @@
+@use 'variables' as *;
+
+// works.scss
+
+// レスポンシブデザイン
+@media screen and (max-width: 767px) {
+    .works-primary {
+        display: flex;
+        flex-direction: column-reverse; /* 垂直方向に並べ替えるが逆順 */
+    }
+
+    .works-primary.lp {
+        flex-direction: column; /* LP制作セクションは順序を変更しない */
+    }
+
+    .colum-first__photo01__oposite {
+        padding-left: 0 !important; /* レスポンシブ時に左パディングを削除 */
+    }
+
+    .colum-second,
+    .section-head__small,
+    .section-head__large,
+    .profile-article__head01 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 水平方向の中央寄せ */
+        justify-content: center; /* 垂直方向の中央寄せ */
+        text-align: center; /* テキストを中央寄せ */
+    }
+
+    .section-head__small{
+        padding-bottom: 4px;
+    }
+
+
+    .section-head,
+    .works-article__head01,
+    .works-article__btn,
+    .profile-article__head01,
+    .profile-article__head02 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        text-align: center; /* テキストを中央寄せ */
+    }
+
+    .works-article__btn,
+    .works-article__btn__oposite {
+        justify-content: center; /* ボタンを中央寄せ */
+        margin-top: 24px;
+        margin-bottom: 56px;
+    }
+}
+
+.works-space {
+    background-color: $base-01;
+    display: flex;
+    justify-content: center; /* 水平方向の中央寄せ */
+    align-items: center; /* 垂直方向の中央寄せ */
+    text-align: center; /* テキストを中央寄せ */
+    padding-top: 121px; /* 上部に121pxの空白 */
+    padding-bottom: 72px; /* 下部に72pxの空白 */
+
+    @media screen and (max-width: 767px) {
+        padding-top: 48px; /* iPhoneの場合の上部空白 */
+        padding-bottom: 48px; /* iPhoneの場合の下部空白 */
+    }
+}
+
+.works-title {
+    margin: 0 auto; /* 左右中央に寄せる */
+
+    @media screen and (max-width: 767px) {
+        // margin-left: 16px; /* モバイルデバイスでは左に寄せる */
+    }
+}
+
+.works {
+    background-color: $base-01;
+
+    &-primary {
+        display: flex;
+        flex-wrap: wrap; /* レスポンシブ時に折り返す */
+        align-items: center; /* 垂直方向の中央寄せ */
+
+        .colum-first,
+        .colum-second {
+            padding: 16px 48px; /* 上下に16px、左右に24pxのパディング */
+            width: 100%; /* 幅を100%に設定 */
+            box-sizing: border-box; /* ボックスサイズを要素の幅と高さに含める */
+
+            @media screen and (max-width: 767px) {
+                justify-content: center; /* 水平方向の中央寄せ */
+                align-items: center; /* 垂直方向の中央寄せ */
+                text-align: center; /* テキストを中央寄せ */
+                padding: 16px 24px; /* レスポンシブ時は既存の左右間で残す */
+            }
+        }
+
+        .colum-first__photo01 {
+            width: 100%;
+            height: auto; /* 高さを自動調整 */
+            max-width: 100%; /* 最大幅を100%に設定 */
+        }
+
+        .section-head,
+        .works-article__head01 {
+            margin-bottom: 16px;
+            padding-right: 40px;
+            padding-left: 24px;
+            text-align: left; /* テキストを左寄せ */
+        }
+
+        .colum-first__photo01__oposite {
+            width: 100%;
+            height: auto; /* 高さを自動調整 */
+            max-width: 100%; /* 最大幅を100%に設定 */
+            padding-left: 24px;
+        }
+
+        .section-head__oposite,
+        .works-article__head01__oposite {
+            margin-bottom: 16px;
+            text-align: right; /* テキストを右寄せ */
+        }
+
+        .works-article__btn {
+            display: flex; /* フレックスボックスにする */
+            justify-content: flex-start; /* 右に寄せる */
+            padding-right: 40px; /* 右にスペースを追加 */
+            padding-left: 24px;
+        }
+
+        .works-article__btn__oposite {
+            display: flex; /* フレックスボックスにする */
+            justify-content: flex-end; /* 右に寄せる */
+        }
+    }
+}
+
+// ボタン
+.c-btn {
+    background: $main-01;
+    border: 2px solid $main-01;
+    border-radius: 60px;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    max-width: 160px;
+    padding: 12px 28px;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+        // max-width: none; /* モバイルデバイスでは最大幅解除 */
+        width: 100%; /* モバイルデバイスでは幅100% */
+    }
+}
+
+.c-btn.circle {
+    background: $base-01;
+    color: $main-01;
+    overflow: hidden;
+    position: relative;
+    transition-duration: .4s;
+    z-index: 2;
+
+    @media screen and (max-width: 767px) {
+        // max-width: none; /* モバイルデバイスでは最大幅解除 */
+        width: 100%; /* モバイルデバイスでは幅100% */
+    }
+}
+
+.c-btn.circle::after {
+    background: $main-01;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+    z-index: -1;
+    transform: translateY(-50%) scale(0.1);
+    transition: opacity .5s, transform 0s;
+    transition-delay: 0s, .4s;
+
+    @media screen and (max-width: 767px) {
+        max-width: none; /* モバイルデバイスでは最大幅解除 */
+        width: 100%; /* モバイルデバイスでは幅100% */
+    }
+}
+
+.c-btn.circle:hover {
+    color: $base-01;
+}
+
+.c-btn.circle:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    transition-delay: 0s;
+    transition: opacity .8s, transform .6s ease-in-out;
+}
